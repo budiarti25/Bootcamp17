@@ -30,6 +30,7 @@ public class CountryDAO implements CountryInterfaceDAO{
      * @param connection 
      */
     public CountryDAO(Connection connection) {
+        
         this.connection = connection;
     }
 
@@ -40,6 +41,7 @@ public class CountryDAO implements CountryInterfaceDAO{
      */
     @Override
     public boolean insert(Country country) {
+        
         boolean flag=false;
         String query="INSERT INTO Countries VALUES(?,?,?)";
         try {
