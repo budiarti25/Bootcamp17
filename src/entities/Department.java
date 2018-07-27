@@ -7,26 +7,26 @@ package entities;
 
 /**
  *
- * @author Budiarti
+ * @author Simbok_pc
  */
 public class Department {
-    private int departmentID;
+    private int departmentId;
     private String departmentName;
     private int managerId;
     private int locationId;
 
     /**
-     * @return the departmentID
+     * @return the departmentId
      */
-    public int getDepartmentID() {
-        return departmentID;
+    public int getDepartmentId() {
+        return departmentId;
     }
 
     /**
-     * @param departmentID the departmentID to set
+     * @param departmentId the departmentId to set
      */
-    public void setDepartmentID(int departmentID) {
-        this.departmentID = departmentID;
+    public void setDepartmentId(int departmentId) {
+        this.departmentId = departmentId;
     }
 
     /**
