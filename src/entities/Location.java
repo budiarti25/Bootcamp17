@@ -12,11 +12,31 @@ package entities;
 public class Location {
     private int locationId;
     private String streetAddress;
-    private int postalCode;
+    private String postalCode;
     private String city;
     private String stateProvince;
     private String countryId;
 
+    public Location() {
+    }
+    /**
+     * 
+     * @param locationId
+     * @param streetAddress
+     * @param postalCode
+     * @param city
+     * @param stateProvince
+     * @param countryId 
+     */
+    public Location(int locationId, String streetAddress, String postalCode, String city, String stateProvince, String countryId) {
+        this.locationId = locationId;
+        this.streetAddress = streetAddress;
+        this.postalCode = postalCode;
+        this.city = city;
+        this.stateProvince = stateProvince;
+        this.countryId = countryId;
+    }
+    
     /**
      * @return the locationId
      */
@@ -48,14 +68,14 @@ public class Location {
     /**
      * @return the postalCode
      */
-    public int getPostalCode() {
+    public String getPostalCode() {
         return postalCode;
     }
 
     /**
      * @param postalCode the postalCode to set
      */
-    public void setPostalCode(int postalCode) {
+    public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
 
