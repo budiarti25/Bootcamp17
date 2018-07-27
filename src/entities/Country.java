@@ -25,42 +25,42 @@ public class Country {
 
     
     /**
-     * @return the countryId
+     * @return the countryId mengambil nilai dari county_id
      */
     public String getCountryId() {
         return countryId;
     }
 
     /**
-     * @param countryId the countryId to set
+     * @param countryId the countryId to set memberikan/memasukkan nilai ke country_id
      */
     public void setCountryId(String countryId) {
         this.countryId = countryId;
     }
 
     /**
-     * @return the countryName
+     * @return the countryName mengambil nilai dari county_name
      */
     public String getCountryName() {
         return countryName;
     }
 
     /**
-     * @param countryName the countryName to set
+     * @param countryName the countryName to set memberikan/memasukkan nilai ke country_name
      */
     public void setCountryName(String countryName) {
         this.countryName = countryName;
     }
 
     /**
-     * @return the regionId
+     * @return the regionId mengambil nilai dari region_id
      */
     public int getRegionId() {
         return regionId;
     }
 
     /**
-     * @param regionId the regionId to set
+     * @param regionId the regionId to set memberikan/memasukkan nilai ke region_id
      */
     public void setRegionId(int regionId) {
         this.regionId = regionId;

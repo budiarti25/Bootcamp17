@@ -25,10 +25,19 @@ public class CountryDAO implements CountryInterfaceDAO{
     public CountryDAO() {
     }
 
+    /**
+     * fungsi untuk memanggil koneksi
+     * @param connection 
+     */
     public CountryDAO(Connection connection) {
         this.connection = connection;
     }
 
+    /**
+     * fungsi insert untuk Tabel country
+     * @param country
+     * @return 
+     */
     @Override
     public boolean insert(Country country) {
         boolean flag=false;
@@ -45,7 +54,12 @@ public class CountryDAO implements CountryInterfaceDAO{
         }
         return flag;
     }
-
+    
+    /**
+     * fungsi update untuk Tabel country
+     * @param country
+     * @return 
+     */
     @Override
     public boolean update(Country country) {
         boolean flag=false;
@@ -63,6 +77,11 @@ public class CountryDAO implements CountryInterfaceDAO{
         return flag;
     }
 
+    /**
+     * fungsi delete untuk Tabel country
+     * @param id
+     * @return 
+     */
     @Override
     public boolean delete(String id) {
         boolean flag=false;
@@ -78,6 +97,10 @@ public class CountryDAO implements CountryInterfaceDAO{
         return flag;
     }
 
+    /**
+     * fungsi menggambil/menampilkan data dari Tabel country
+     * @return 
+     */
     @Override
     public List<Country> getAll() {
         List<Country> datas = new ArrayList<>();
@@ -98,6 +121,12 @@ public class CountryDAO implements CountryInterfaceDAO{
         return datas ;
     }
 
+    /**
+     * fungsi tampil data dari Tabel country berdasarkan parameter
+     * @param category bertipe String untuk parameter kategori yg akan dijadikan acuan mengurutkan data
+     * @param sort bertipe String untuk mengurutkan data berdasar asc/ desc
+     * @return 
+     */
     @Override
     public List<Country> getAllSort(String category, String sort) {
         List<Country> datas = new ArrayList<>();
@@ -118,6 +147,12 @@ public class CountryDAO implements CountryInterfaceDAO{
         return datas;
     }
 
+    /**
+     * fungsi search dari Tabel country dengan parameter tertentu
+     * @param category bertipe String untuk parameter kategori yg akan ddicari
+     * @param data bertipe String untuk parameter kata kunci
+     * @return 
+     */
     @Override
     public List<Country> search(String category, String data) {
         List<Country> datas = new ArrayList<>();
@@ -138,6 +173,11 @@ public class CountryDAO implements CountryInterfaceDAO{
         return datas;
     }
 
+    /**
+     * fungsi getById untuk menampilkan data Tabel country dengan parameter id
+     * @param id bertipe integer
+     * @return 
+     */
     @Override
     public Country getById(int id) {
         Country country = new Country();

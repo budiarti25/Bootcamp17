@@ -277,6 +277,9 @@ public class CountryView extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtname;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * fungsi untuk menampilkan isi tabel
+     */
     public void bindingTable() {
         String[] header = {"Country Id", "Cuntry Name", "Region Id"};
         DefaultTableModel defaultTableModel = new DefaultTableModel(header, 0);
@@ -289,6 +292,11 @@ public class CountryView extends javax.swing.JInternalFrame {
         tblcountry.setModel(defaultTableModel);
     }
 
+    /**
+     * fungsi untuk pencarian berdasarkan kondisi
+     * @param category
+     * @param data 
+     */
     public void search(String category, String data) {
         String[] header = {"Country Id", "Cuntry Name", "Region Id"};
         DefaultTableModel defaultTableModel = new DefaultTableModel(header, 0);
