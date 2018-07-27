@@ -28,7 +28,11 @@ public class LocationDAO implements LocationInterfaceDAO {
      public LocationDAO(Connection connection) {
         this.connection = connection;
     }
-     
+     /**
+      * Fungsi Insert
+      * @param location
+      * @return 
+      */
      public boolean insert(Location location) {
         boolean flag = false;
         String query = "INSERT INTO Locations VALUES (?,?,?,?,?,?)";
