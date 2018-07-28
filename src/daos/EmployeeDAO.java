@@ -81,7 +81,7 @@ public class EmployeeDAO implements EmployeeIntefaceDAO {
             preparedStatement.setDouble(10, employee.getDepartmentid());
             preparedStatement.setInt(11, employee.getEmployeeId());
             preparedStatement.executeUpdate();
-            preparedStatement.execute();
+         
 
             return true;
         } catch (SQLException ex) {
