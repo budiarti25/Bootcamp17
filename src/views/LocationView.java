@@ -41,7 +41,7 @@ public class LocationView extends javax.swing.JInternalFrame {
         TblLocation = new javax.swing.JTable();
         textCari = new javax.swing.JTextField();
         btnCari = new javax.swing.JButton();
-        cmbLocation = new javax.swing.JComboBox<>();
+        cmbLocation = new javax.swing.JComboBox<String>();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -59,6 +59,10 @@ public class LocationView extends javax.swing.JInternalFrame {
         btnEdit = new javax.swing.JButton();
         btnDrop = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
         setTitle("Locations");
 
         TblLocation.setModel(new javax.swing.table.DefaultTableModel(
@@ -83,7 +87,7 @@ public class LocationView extends javax.swing.JInternalFrame {
             }
         });
 
-        cmbLocation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "location_id", "street_address", "postal_code", "city", "state_province", "country_id" }));
+        cmbLocation.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "location_id", "street_address", "postal_code", "city", "state_province", "country_id" }));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Location Details"));
 

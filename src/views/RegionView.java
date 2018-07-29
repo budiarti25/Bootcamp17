@@ -50,6 +50,12 @@ public class RegionView extends javax.swing.JInternalFrame {
         data = new javax.swing.JTextField();
         btnfind = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Regions");
+
         tableRegion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 

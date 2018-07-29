@@ -39,7 +39,7 @@ public class EmployeeView extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblEmployee = new javax.swing.JTable();
         txtFrsName = new javax.swing.JPanel();
-        cmbCategori = new javax.swing.JComboBox<>();
+        cmbCategori = new javax.swing.JComboBox<String>();
         btnFind = new javax.swing.JButton();
         txtEmplId = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
@@ -68,6 +68,12 @@ public class EmployeeView extends javax.swing.JInternalFrame {
         txtFrsnm = new javax.swing.JTextField();
         txtCari = new javax.swing.JTextField();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Employee");
+
         tblEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -86,7 +92,7 @@ public class EmployeeView extends javax.swing.JInternalFrame {
         txtFrsName.setBorder(javax.swing.BorderFactory.createTitledBorder("Employee "));
 
         cmbCategori.setMaximumRowCount(11);
-        cmbCategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "EmployeeID", "FirstName", "LastName", "Emai", "PhoneNumber'", "Hire_Date", "JobID", "Salary", "CommisionPCT", "ManagerID", "DepartmentID", " " }));
+        cmbCategori.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "EmployeeID", "FirstName", "LastName", "Emai", "PhoneNumber'", "Hire_Date", "JobID", "Salary", "CommisionPCT", "ManagerID", "DepartmentID", " " }));
 
         btnFind.setText("Find");
         btnFind.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +124,7 @@ public class EmployeeView extends javax.swing.JInternalFrame {
 
         jLabel1.setText("Employe ID");
 
-        jLabel2.setText("First NAme");
+        jLabel2.setText("First Name");
 
         jLabel3.setText("Last name");
 
@@ -132,11 +138,11 @@ public class EmployeeView extends javax.swing.JInternalFrame {
 
         jLabel8.setText("Commison");
 
-        jLabel9.setText("departmentid");
+        jLabel9.setText("Department Id");
 
-        jLabel10.setText("manager id");
+        jLabel10.setText("Manager Id");
 
-        jLabel11.setText("phone");
+        jLabel11.setText("Phone");
 
         txtmanagerId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,80 +156,60 @@ public class EmployeeView extends javax.swing.JInternalFrame {
             txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(txtFrsNameLayout.createSequentialGroup()
                 .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(txtFrsNameLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(cmbCategori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(txtFrsNameLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(cmbCategori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(txtFrsNameLayout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(btnDrop)
+                                .addGap(7, 7, 7)
+                                .addComponent(btnSave))
+                            .addGroup(txtFrsNameLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(btnFind))))
+                    .addGroup(txtFrsNameLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(btnEdit)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtEmplId, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
+                            .addComponent(txtLastNm, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
+                            .addComponent(txtFrsnm)
+                            .addComponent(txtPhone)))
+                    .addGroup(txtFrsNameLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)))
+                    .addGroup(txtFrsNameLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(txtFrsNameLayout.createSequentialGroup()
-                                    .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(26, 26, 26)
-                                    .addComponent(btnFind))
-                                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtLastNm)
-                                .addComponent(txtEmplId)
+                                    .addGap(78, 78, 78)
+                                    .addComponent(txtDepartmentId, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, txtFrsNameLayout.createSequentialGroup()
-                                    .addGap(16, 16, 16)
-                                    .addComponent(btnDrop)
+                                    .addComponent(jLabel10)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnSave)
-                                    .addGap(11, 11, 11))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, txtFrsNameLayout.createSequentialGroup()
-                            .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, txtFrsNameLayout.createSequentialGroup()
-                                    .addGap(27, 27, 27)
-                                    .addComponent(jLabel1))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, txtFrsNameLayout.createSequentialGroup()
-                                    .addGap(22, 22, 22)
-                                    .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(txtFrsNameLayout.createSequentialGroup()
-                                            .addGap(25, 25, 25)
-                                            .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel2)
-                                                .addComponent(btnEdit)
-                                                .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel4)
-                                                    .addComponent(jLabel3)
-                                                    .addComponent(jLabel11)))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(txtFrsnm, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(txtFrsNameLayout.createSequentialGroup()
-                                            .addComponent(jLabel9)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(txtDepartmentId, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                            .addGap(13, 13, 13)))
-                    .addGroup(txtFrsNameLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(txtFrsNameLayout.createSequentialGroup()
-                                    .addGap(84, 84, 84)
                                     .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtsalary, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                                        .addComponent(txtHireDate, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
                                         .addComponent(txtJobid)
-                                        .addComponent(txtHireDate)))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jLabel6))
-                                    .addGroup(txtFrsNameLayout.createSequentialGroup()
-                                        .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel8)
-                                            .addComponent(jLabel7))
-                                        .addGap(29, 29, 29))))
-                            .addGroup(txtFrsNameLayout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtmanagerId, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(15, 15, 15)))))
-                .addContainerGap(21, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, txtFrsNameLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(txtCommision, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(107, 107, 107))
+                                        .addComponent(txtsalary)
+                                        .addComponent(txtCommision)
+                                        .addComponent(txtmanagerId))))
+                            .addComponent(jLabel9))))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         txtFrsNameLayout.setVerticalGroup(
             txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,7 +235,7 @@ public class EmployeeView extends javax.swing.JInternalFrame {
                 .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -262,18 +248,18 @@ public class EmployeeView extends javax.swing.JInternalFrame {
                     .addComponent(jLabel6)
                     .addComponent(txtJobid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(txtsalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtsalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
                 .addGap(20, 20, 20)
                 .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(txtCommision, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtmanagerId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(8, 8, 8)
                 .addGroup(txtFrsNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtDepartmentId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -293,7 +279,7 @@ public class EmployeeView extends javax.swing.JInternalFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtFrsName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

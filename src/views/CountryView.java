@@ -53,6 +53,12 @@ public class CountryView extends javax.swing.JInternalFrame {
         data = new javax.swing.JTextField();
         btnFind = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Country");
+
         tblcountry.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 

@@ -24,7 +24,7 @@ public class MyConnection {
             ods.setServiceName("XE");
             ods.setDatabaseName("HR");
             ods.setUser("system");
-            ods.setPassword("dayinta11");
+            ods.setPassword("budiarti");
             connect = ods.getConnection();
             connect.createStatement()
                     .execute("alter session set " + "current_schema=hr");
