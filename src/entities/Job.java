@@ -7,7 +7,7 @@ package entities;
 
 /**
  *
- * @author Budiarti
+ * @author Dayinta Warih Wulandari
  */
 public class Job {
 
@@ -15,6 +15,16 @@ public class Job {
     private String jobTitle;
     private int minSalary;
     private int maxSalary;
+    
+        public Job() {
+    }
+
+    public Job(String jobId, String jobTitle, int minSalary, int maxSalary) {
+        this.jobId = jobId;
+        this.jobTitle = jobTitle;
+        this.minSalary = minSalary;
+        this.maxSalary = maxSalary;
+    }
 
     /**
      * @return the jobId
